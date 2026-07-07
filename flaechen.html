@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flächen – Turm Areal Winterthur</title>
+<meta name="description" content="Flächen – Turm Areal Winterthur. Inhalt folgt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fff;--sand:#f6f5f3;--line:#e4e2de;--ink:#16181d;--ink-soft:#585c66;--red:#d4212d;--red-dark:#a5121c;--red-tint:#fbeceb;--maxw:1240px;--radius:18px;--font-display:"Fraunces",Georgia,serif;--font-sans:"Inter",system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font-sans);color:var(--ink);background:var(--paper);line-height:1.65;display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.06;letter-spacing:-.01em;margin:0}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.7rem 1.1rem;z-index:200}
+.skip:focus{left:0}
+.wrap{width:min(100% - 2.4rem,var(--maxw));margin-inline:auto}
+.eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--red);display:inline-flex;align-items:center;gap:.6rem}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--red);display:inline-block}
+.btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--ink);color:#fff;font-weight:600;padding:.9rem 1.5rem;border-radius:100px;border:1.5px solid var(--ink);transition:transform .25s ease,background .25s ease,color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--ink)}.btn--ghost:hover{background:var(--ink);color:#fff}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 0}
+.brand{display:flex;align-items:center;gap:.7rem;font-family:var(--font-display);font-weight:600;font-size:1.25rem}
+.brand .mark{width:34px;height:34px;border-radius:9px;background:var(--red);position:relative;overflow:hidden;box-shadow:inset 0 0 0 3px rgba(255,255,255,.22)}
+.brand .mark::after{content:"";position:absolute;left:50%;top:6px;transform:translateX(-50%);width:8px;height:22px;background:#fff;border-radius:2px 2px 0 0}
+.brand small{display:block;font-family:var(--font-sans);font-weight:500;font-size:.62rem;letter-spacing:.22em;color:var(--ink-soft);text-transform:uppercase;margin-top:1px}
+.menu{display:flex;align-items:center;gap:.35rem;list-style:none;margin:0;padding:0}
+.menu a{position:relative;padding:.5rem .9rem;border-radius:100px;font-weight:500;transition:background .2s}
+.menu a:hover{background:var(--sand)}
+.menu a[aria-current="page"]{color:var(--red)}
+.menu a[aria-current="page"]::after{content:"";position:absolute;left:.9rem;right:.9rem;bottom:.28rem;height:2px;background:var(--red);border-radius:2px}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--line);border-radius:12px;background:var(--paper);cursor:pointer;place-items:center}
+.burger span,.burger span::before,.burger span::after{content:"";display:block;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .2s}
+.burger span::before{transform:translateY(-6px)}.burger span::after{transform:translateY(4px)}
+.burger[aria-expanded="true"] span{background:transparent}
+.burger[aria-expanded="true"] span::before{transform:rotate(45deg)}
+.burger[aria-expanded="true"] span::after{transform:rotate(-45deg) translateY(-1px)}
+main{flex:1 0 auto;display:flex;align-items:center}
+.page-hero{width:100%;padding:clamp(4rem,12vw,9rem) 0;background:radial-gradient(120% 90% at 90% -10%,var(--red-tint),transparent 55%),var(--sand)}
+.page-hero h1{font-size:clamp(2.6rem,7vw,5rem);margin-top:1rem;max-width:16ch;text-wrap:balance}
+.page-hero .placeholder{margin-top:1.6rem;display:inline-flex;align-items:center;gap:.7rem;color:var(--ink-soft);background:var(--paper);border:1px dashed var(--line);padding:.7rem 1.1rem;border-radius:100px;font-size:.95rem}
+.page-hero .placeholder .dot{width:9px;height:9px;border-radius:50%;background:var(--red);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1)}}
+.page-hero .back{margin-top:2.4rem;display:inline-flex}
+.site-footer{flex-shrink:0;background:#0f1014;color:#8b8f9a;padding:2rem 0;font-size:.9rem}
+.site-footer .row{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+.site-footer nav{display:flex;gap:1.3rem;flex-wrap:wrap}
+.site-footer a:hover{color:#fff}
+@media (max-width:760px){
+  .burger{display:grid}
+  .menu{position:fixed;inset:64px 0 auto 0;flex-direction:column;align-items:stretch;gap:.2rem;background:var(--paper);border-bottom:1px solid var(--line);padding:1rem 1.2rem 1.6rem;transform:translateY(-140%);transition:transform .35s cubic-bezier(.22,.61,.36,1);box-shadow:0 30px 60px -30px rgba(0,0,0,.4)}
+  .menu.is-open{transform:translateY(0)}
+  .menu a{padding:.85rem 1rem;font-size:1.1rem;border-radius:12px}
+  .menu a[aria-current="page"]::after{display:none}.menu a[aria-current="page"]{background:var(--red-tint)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a class="brand" href="index.html" aria-label="Turm Areal Winterthur – Startseite">
+        <span class="mark" aria-hidden="true"></span><span>Turm&nbsp;Areal<small>Winterthur</small></span>
+      </a>
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="menu"><span aria-hidden="true"></span></button>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="areal.html">Areal</a></li>
+        <li><a href="flaechen.html" aria-current="page">Flächen</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Turm Areal Winterthur</span>
+      <h1>Flächen</h1>
+      <div class="placeholder"><span class="dot" aria-hidden="true"></span> Inhalt folgt</div>
+      <div class="back"><a class="btn btn--ghost" href="index.html">← Zurück zur Startseite</a></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap row">
+    <span>© <span id="year"></span> Turm Areal Winterthur</span>
+    <nav aria-label="Footer-Navigation">
+      <a href="index.html">Home</a><a href="areal.html">Areal</a><a href="flaechen.html">Flächen</a><a href="news.html">News</a><a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+</footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const b=document.getElementById('burger'),m=document.getElementById('menu');
+b.addEventListener('click',()=>{const o=b.getAttribute('aria-expanded')==='true';b.setAttribute('aria-expanded',String(!o));b.setAttribute('aria-label',o?'Menü öffnen':'Menü schliessen');m.classList.toggle('is-open',!o)});
+addEventListener('keydown',e=>{if(e.key==='Escape'){b.setAttribute('aria-expanded','false');m.classList.remove('is-open')}});
+</script>
+</body>
+</html>
